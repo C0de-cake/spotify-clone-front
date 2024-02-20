@@ -1,0 +1,73 @@
+$enable-dark-mode: true;
+
+$body-bg-dark: #000;
+$body-color-dark: #fff;
+
+$h1-font-size: 1.6rem;
+$h2-font-size: 1.4rem;
+$h3-font-size: 1.2rem;
+$h4-font-size: 1.1rem;
+$h5-font-size: 1rem;
+
+$font-family-base: 'Noto Sans', sans-serif;
+$font-size-base: 0.9rem;
+$font-weight-base: 500;
+$font-size-small: 0.8rem;
+
+$primary: #65D46A;
+$secondary: #B3B3B3;
+$white: white;
+$dark: #121212;
+
+$link-color-dark: $secondary;
+$link-decoration: none;
+$link-hover-color-dark: $white;
+$link-color-dark: $secondary;
+
+$btn-border-radius: 25px;
+$btn-padding-x: 30px;
+$btn-padding-y: 10px;
+$btn-font-weight: 700;
+$btn-link-hover-color: $white;
+
+$input-bg: #292929;
+$input-color: $secondary;
+$input-placeholder-color: #6a6a6a;
+$input-group-addon-bg: $input-bg;
+$form-floating-height: 50px;
+$form-floating-padding-y: 13px;
+
+//
+// Height
+//
+$header-height: 61px;
+$footer-height: 85px;
+$navigation-height: 163px;
+$library-height: calc(100% - $navigation-height);
+$main-row-height: calc(100% - $footer-height);
+$main-content-height: calc(100% - $header-height);
+
+//
+// Card
+//
+$card-inactive-background: #171717;
+$card-hover-background: #242424;
+$card-border-radius: 7px;
+$card-border-color: $card-inactive-background;
+
+//
+// Form range
+//
+$form-range-track-bg: #4d4d4d;
+$form-range-thumb-bg: $white;
+$form-range-thumb-width: 0.8rem;
+$form-range-thumb-height: $form-range-thumb-width;
+$form-range-track-width: 75%;
+$form-range-track-height: .3rem;
+
+//
+// Modal
+//
+$modal-content-border-color: $dark;
+$modal-content-border-width: 2px;
+$modal-content-border-radius: var(--bs-border-radius-lg);
