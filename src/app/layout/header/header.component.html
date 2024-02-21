@@ -1,0 +1,35 @@
+<nav class="rounded-top-2 navbar sticky-top bg-dark z-1 p-2">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <div class="d-flex align-items-center">
+        <div (click)="goBackward()"
+             class="me-2 rounded-5 border-1 bg-black router-icon d-flex align-items-center justify-content-center">
+          <fa-icon icon="chevron-left" size="2x"></fa-icon>
+        </div>
+        <div (click)="goForward()"
+             class="rounded-5 border-1 bg-black router-icon d-flex align-items-center justify-content-center">
+          <fa-icon icon="chevron-right" size="2x"></fa-icon>
+        </div>
+      </div>
+      <div>
+        @if (!authService.isAuthenticated()) {
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="hover-animation">
+              <a (click)="login()" class="me-4">Sign up</a>
+            </div>
+            <a class="btn btn-light hover-animation" (click)="login()">Login</a>
+          </div>
+        } @else {
+          <button class="btn btn-light hover-animation me-2" (click)="logout()">Logout</button>
+          <a>
+            @if (connectedUser.imageUrl != null) {
+              <img src="{{connectedUser.imageUrl}}" alt="user-avatar" class="avatar" width="35" height="35"/>
+            } @else {
+              <fa-icon icon="user" class="avatar-unknown"></fa-icon>
+            }
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</nav>
