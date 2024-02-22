@@ -4,6 +4,7 @@ import {RouterModule} from "@angular/router";
 import {SmallSongCardComponent} from "../../shared/small-song-card/small-song-card.component";
 import {SongService} from "../../service/song.service";
 import {ReadSong} from "../../service/model/song.model";
+import {SongContentService} from "../../service/song-content.service";
 
 @Component({
   selector: 'app-library',
@@ -15,6 +16,7 @@ import {ReadSong} from "../../service/model/song.model";
 export class LibraryComponent implements OnInit {
 
   private songService = inject(SongService);
+  private songContentService = inject(SongContentService);
 
   songs: Array<ReadSong> = [];
 
@@ -32,5 +34,9 @@ export class LibraryComponent implements OnInit {
 
   private fetchSongs() {
     this.songService.getAll();
+  }
+
+  onPlaySong(songToPlayFirst: ReadSong): void {
+    this.songContentService.createNewQueue(songToPlayFirst, this.songs!);
   }
 }

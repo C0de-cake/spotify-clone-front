@@ -12,7 +12,7 @@
 <div class="d-flex flex-column rounded-bottom-2 library-height overflow-scroll bg-dark p-2">
   @for (song of songs; track song.publicId) {
     <div class="mt-1 library-song-card p-1">
-      <app-small-song-card [song]="song"/>
+      <app-small-song-card [song]="song" (songToPlay$)="onPlaySong($event)"/>
     </div>
   }
 </div>

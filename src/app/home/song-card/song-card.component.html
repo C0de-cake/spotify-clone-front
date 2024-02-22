@@ -1,11 +1,13 @@
-<div (mouseover)="onHoverPlay(true)"
+<div (click)="play()"
+     (mouseover)="onHoverPlay(true)"
      (mouseleave)="onHoverPlay(false)">
   <div class="card-body">
-    <img class="card-img-top card-img-bottom" [src]="'data:' + songDisplay.coverContentType + ';base64,' + songDisplay.cover" alt="cover"/>
-    <h5 class="title mt-3">{{songDisplay.title?.value}}</h5>
-    <p class="author">{{songDisplay.author?.value}}</p>
+    <img class="card-img-top card-img-bottom"
+         [src]="'data:' + songDisplay.coverContentType + ';base64,' + songDisplay.cover" alt="cover"/>
+    <h5 class="title mt-3">{{ songDisplay.title?.value }}</h5>
+    <p class="author">{{ songDisplay.author?.value }}</p>
   </div>
-  @if(songDisplay.displayPlay) {
+  @if (songDisplay.displayPlay) {
     <div class="play position-absolute d-flex align-items-center" [@inOutAnimation]>
       <fa-icon class="text-primary" [icon]="'circle-play'"></fa-icon>
     </div>

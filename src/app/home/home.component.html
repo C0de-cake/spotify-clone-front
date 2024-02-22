@@ -2,6 +2,6 @@
 <div class="d-flex flex-wrap">
   @for (song of allSongs; track song.publicId) {
     <app-song-card class="card song-card-background mt-0 mb-4 ms-0 me-4"
-                   [song]="song"/>
+                   [song]="song" (songToPlay$)="onPlaySong($event)"/>
   }
 </div>

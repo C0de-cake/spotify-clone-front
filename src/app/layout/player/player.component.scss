@@ -1,0 +1,46 @@
+@import "../../../assets/scss/bootstrap-variables";
+
+.player {
+  margin-left: 14px;
+  margin-right: 12px;
+  margin-bottom: 9px;
+  height: $footer-height;
+
+  .control {
+    font-size: 25px;
+    color: $secondary;
+  }
+
+  .control:hover{
+    color: $white;
+  }
+
+  .play-icon {
+    font-size: 33px;
+    color: $white;
+    cursor: pointer;
+  }
+
+  .play-icon:hover {
+    transform: scale(1.09);
+  }
+
+  .volume {
+    width: 130px;
+
+    .volume-icon {
+      fa-icom {
+        width: 30px;
+        font-size: 17px;
+      }
+    }
+
+    .form-range {
+      width: 100px;
+    }
+  }
+}
+
+.song-played {
+  width: 250px;
+}
