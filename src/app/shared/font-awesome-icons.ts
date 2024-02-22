@@ -22,5 +22,5 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faChevronRight,
   faUser,
   faCircleNotch,
-  faCircleXmark,
+  faCircleXmark
 ]

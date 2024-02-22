@@ -1,0 +1,26 @@
+@import "../../assets/scss/bootstrap-variables";
+
+.card {
+  flex-basis: 14%;
+  flex-grow: 0;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    flex-basis: 21%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card {
+    flex-basis: 12%;
+  }
+}
+
+@media (min-width: 1850px) {
+  .card {
+    flex-basis: 14%;
+  }
+}

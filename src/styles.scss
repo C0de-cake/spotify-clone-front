@@ -3,3 +3,13 @@
 /* Importing Bootstrap SCSS file. */
 @import 'assets/scss/_bootstrap-variables';
 @import 'bootstrap/scss/bootstrap';
+
+.song-card-background {
+  cursor: pointer;
+  background-color: $card-inactive-background;
+}
+
+.song-card-background:hover {
+  background-color: $card-hover-background;
+  border-radius: $card-border-radius;
+}
