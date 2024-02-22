@@ -3,7 +3,9 @@ import {
   faBook,
   faChevronLeft,
   faChevronRight,
+  faCircleNotch,
   faCirclePlay,
+  faCircleXmark,
   faHome,
   faPlus,
   faSearch,
@@ -18,5 +20,7 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faPlus,
   faChevronLeft,
   faChevronRight,
-  faUser
+  faUser,
+  faCircleNotch,
+  faCircleXmark,
 ]
