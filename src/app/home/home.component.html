@@ -1,7 +1,15 @@
 <h1 class="mb-3 mt-3">Good morning</h1>
-<div class="d-flex flex-wrap">
-  @for (song of allSongs; track song.publicId) {
-    <app-song-card class="card song-card-background mt-0 mb-4 ms-0 me-4"
-                   [song]="song" (songToPlay$)="onPlaySong($event)"/>
-  }
-</div>
+@if (isLoading) {
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="spinner-grow text-primary loader" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+} @else {
+  <div class="d-flex flex-wrap">
+    @for (song of allSongs; track song.publicId) {
+      <app-song-card class="card song-card-background mt-0 mb-4 ms-0 me-4"
+                     [song]="song" (songToPlay$)="onPlaySong($event)"/>
+    }
+  </div>
+}
