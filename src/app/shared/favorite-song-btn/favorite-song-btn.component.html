@@ -1,0 +1,9 @@
+@if (authService.isAuthenticated()) {
+  <div (click)="onFavorite(song())">
+    @if(song().favorite) {
+      <fa-icon class="favorite text-primary" [icon]="['fas', 'heart']"></fa-icon>
+    } @else {
+      <fa-icon class="favorite text-primary" [icon]="['far', 'heart']"></fa-icon>
+    }
+  </div>
+}

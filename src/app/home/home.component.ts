@@ -5,13 +5,15 @@ import {SongService} from "../service/song.service";
 import {ToastService} from "../service/toast.service";
 import {ReadSong} from "../service/model/song.model";
 import {SongContentService} from "../service/song-content.service";
+import {FavoriteSongCardComponent} from "./favorite-song-card/favorite-song-card.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     FontAwesomeModule,
-    SongCardComponent
+    SongCardComponent,
+    FavoriteSongCardComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

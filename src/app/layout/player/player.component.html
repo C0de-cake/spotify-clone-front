@@ -2,6 +2,7 @@
   <div class="song-played d-flex align-items-center">
     @if (currentSong) {
       <app-small-song-card [song]="currentSong"/>
+      <app-favorite-song-btn class="ms-4" [song]="currentSong"/>
     }
   </div>
   <div class="d-flex justify-content-center align-items-center">

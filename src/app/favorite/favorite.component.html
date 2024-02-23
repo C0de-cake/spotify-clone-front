@@ -1,0 +1,10 @@
+<h1 class="mb-3">Liked songs</h1>
+
+<div class="pt-3">
+  @for(song of favoriteSongs; track song.publicId) {
+    <div class="song-card-background w-100 mb-2 p-2 pe-3 d-flex align-items-center">
+      <app-small-song-card class="w-100" [song]="song" (songToPlay$)="onPlay(song)"/>
+      <app-favorite-song-btn [song]="song" />
+    </div>
+  }
+</div>
